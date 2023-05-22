@@ -1,0 +1,166 @@
+.body{
+   background: #f0eeee;
+
+}
+
+.wrapper{
+    max-width: 1024px;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 48px auto; 
+    width: 100%;
+}
+
+.pokemon-container{
+   list-style: none;
+
+   display: flex;
+   flex-wrap: wrap; /* responsividade */
+   justify-content: center;
+   gap: 6px;
+   margin-top: 24px;
+
+}
+
+.card{
+    height: 300px;
+    width: 250px;
+    cursor: pointer;
+
+    background: #e5e5e5;
+    text-align: center;
+    border-radius: 4px;
+
+    background-image: url("../assets/pokeball.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: 50px -30px;
+
+}
+
+.card .sprite{
+    width: 100%;
+    image-rendering: pixelated;
+}
+
+.card .name{
+    text-transform: capitalize;
+    font-size: 18px;
+}
+
+.card:hover{
+    -webkit-box-shadow: -2px 2px 22px 0px rgba(0,0,0,0.56);
+-moz-box-shadow: -2px 2px 22px 0px rgba(0,0,0,0.56);
+box-shadow: -2px 2px 22px 0px rgba(0,0,0,0.56);
+}
+
+.card .back {
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	row-gap: 16px;
+	height: 100%;
+}
+
+.card.flipped .back {
+	display: flex;
+}
+
+.card.flipped .front {
+	display: none;
+}
+
+.types {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+}
+
+.type {
+	padding: 4px 8px;
+	border-radius: 4px;
+	color: white;
+	text-transform: capitalize;
+}
+
+.stat {
+	font-size: 14px;
+	text-transform: capitalize;
+}
+
+
+
+.pagination{
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+
+    column-gap: 8px;
+}
+
+.pagination button{
+    padding: 12px 16px;
+    background: #639;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+
+}
+
+.pagination button:hover{
+    background: #4e2479;
+}
+
+.page-index{
+    text-align: center;
+    width: 28px;
+    font-size: 20px;
+}
+
+@keyframes spinner {
+
+     0%{
+    
+      rotate: 0deg;
+    
+     }
+  
+     100%{
+    
+      rotate: 360deg;
+    
+     }
+
+    }
+    
+.spinner{
+    
+      height: 28px;
+    
+      width: 28px;
+    
+      border-radius: 50%;
+
+      border: 3px solid #639;
+    
+      border-bottom-color: transparent;
+
+      animation:spinner 1s linear infinite;
+
+    }
+
+.hidden{
+    display: none;
+}
+
+footer{
+    margin-top: 32px;
+    opacity: 0.7;
+    font-size: 14px;
+}
+
